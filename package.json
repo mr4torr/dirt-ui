@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [],
-  "repository": "https://github.com/mratorr/atom-dirt-ui",
+  "repository": "https://github.com/mratorr/dirt-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
