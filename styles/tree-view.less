@@ -1,0 +1,112 @@
+// Tree View
+// -------------------
+// Used to explore and open files in the current project.
+// Overrides: atom/tree-view
+
+.tree-view-resizer {
+  border-right: 0 solid @base-border-color;
+}
+// hides project tab in tree-view ⬇⬇ (who uses this?)
+
+.atom-dock-inner {
+  .pane .list-inline {
+    display: none;
+  }
+}
+
+.item-views {
+
+  .tree-view-root {
+    padding-left: 16px;
+    padding-right: 0;
+    min-width: inherit;
+  }
+
+  .tree-view {
+    // margin-top: 11px;
+    color: @text-color !important;
+    background-color: @tree-view-background-color;
+
+    .list-tree {
+      position: relative;
+      // hide first indent line in tree view ⬇
+      &:first-child:before {
+        display: none;
+      }
+      // line before folder ⬇
+      &:before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: @background-color-selected;
+        position: absolute;
+        left: 2px;
+        top: 0;
+      }
+
+
+      .list-item {
+        line-height: 28px;
+        position: relative;
+        color: @text-color;
+        cursor: pointer;
+        overflow:hidden;
+        &.project-root-header{
+          background-color: @tree-view-header-background-color;
+          color: @tree-view-header-color;
+        }
+        &.file {
+          margin-left: 2px !important;
+          // padding-left: 37px !important;
+
+          &:hover {
+            background-color: lighten(@base-background-color, 2%);
+          }
+
+          &:before {
+            background: transparent;
+          }
+
+          &:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 100px;
+            // background-color: #2a2f38;
+            // background-color: red;
+            position: absolute;
+            left: -3px;
+            top: 50% - 6px;
+          }
+        }
+
+
+        &.selected {
+          margin: 0;
+          color: @light-text-color !important;
+          padding-left: 15px !important;
+          height: 28px;
+          border-left: 3px solid @color-primary;
+          border-radius: 1px 2px 2px 1px;
+          left: -1px;
+          background: lighten(@base-background-color, 3%);
+
+          &.status-added,
+          &.status-modified {
+            &:before {
+              right: 9px;
+              left: auto;
+            }
+          }
+
+          &:after {
+            background: @color-primary;
+            // left: 15px;
+          }
+        }
+      }
+
+
+    }
+  }
+}
