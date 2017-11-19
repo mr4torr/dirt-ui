@@ -1,16 +1,13 @@
 {
   "name": "atom-dirt-ui",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/mratorr/atom-dirt-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "theme": "ui",
-
-  "dependencies": {
-  }
+  "dependencies": {}
 }
