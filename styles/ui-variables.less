@@ -18,7 +18,26 @@
 @text-color-highlight: #b7c5d3;
 @text-color-selected:  #b7c5d3;
 
-@color:       #282C35;
+@color: #282C35;
+@cyan: #89DDF3;
+@blue: #78D4F4;
+@purple: #BA9FF8;
+@green: #9AE675;
+@red: #FF667E;
+@yellow: #FFED5B;
+@orange: #FFB06F;
+
+// @color: #252D37;
+// @cyan: #5FC0CF;
+// @blue: #88C0D0;
+// @purple: #B48EAD;
+// @green: #A3BE8C;
+// @red: #BF616A;
+// @yellow: #EBCB8B;
+// @orange: #D08770;
+
+
+@color-primary: @purple;
 @color-secundary: lighten(@color, 3%);
 // @color-secundary: #2E3440;
 
@@ -73,15 +92,6 @@
 @tree-view-header-color: @text-color;
 
 
-@cyan: #89DDF3;
-@blue: #78D4F4;
-@purple: #BA9FF8;
-@green: #9AE675;
-@red: #FF667E;
-@yellow: #FFED5B;
-@orange: #FFB06F;
-
-
 // Site colors
 @ui-site-color-1: @blue; // blue
 @ui-site-color-2: @green; // green
@@ -101,7 +111,7 @@
 @background-color-error:   darken(@text-color-error, 30%);
 
 
-@color-primary: @ui-site-color-4;
+// @color-primary: @purple; 
 // Sizes
 @font-size: 12px;
 @input-font-size: 14px;
@@ -117,7 +127,7 @@
 // Misc
 @component-border-radius: 0px;
 @font-family: '-apple-system', 'SFProText', 'BlinkMacSystemFont', 'Droid Sans Mono','Segoe UI', 'Roboto Mono','Lucida Grande', Ubuntu, Cantarell, sans-serif;
-
+@syntax-cursor-color: @color-primary;
 
 @git-text: @text-color;
 @git-bg-hover: #2C313B;

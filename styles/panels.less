@@ -1,7 +1,12 @@
 // panelz
 atom-pane {
-  border-right:1px solid @base-border-color !important;
+  // border-right:1px solid @base-border-color !important;
+  &:last-child {
+    border-right: none;
+  }
 }
+
+
 atom-panel-container.modal {
   position: absolute;
   top: 0;
@@ -10,7 +15,9 @@ atom-panel-container.modal {
 }
 
 .atom-dock-resize-handle.atom-dock-resize-handle-resizable.left, .atom-dock-resize-handle.atom-dock-resize-handle-resizable.right{
-  background: @base-background-color;
+  // background: @base-background-color;
+  background: @base-border-color;
+  width: 1px;
 }
 atom-panel.panel-bottom {
 
@@ -262,14 +269,19 @@ atom-panel.panel-bottom {
           // background-color: lighten(@tool-panel-background-color, 2%);
           border: 1px solid @tool-panel-border-color;
           // font-family: @font-family;
+          font-size: 12px;
 
           .placeholder-text {
-            color: #41505E !important;
+            // color: #41505E !important;
+            font-size: 12px;
           }
-
+          .lines{
+            // height: 34px !important;
+            // border: 1px solid red;
+          }
           &.is-focused {
-            border: 1px solid @color-primary;
-            color: @text-color;
+            // border-color: 1px solid @color-primary;
+            // color: @text-color;
           }
         }
       }
@@ -301,16 +313,21 @@ atom-panel.modal {
     border: solid 1px darken(@base-background-color, 6%);
     padding: 0;
     min-height:48px;
-    padding:14px 0px 0 14px;
+    height:48px;
+    padding:0 3px 0 7px;
     font-size: 18px;
     line-height: 1.0;
     letter-spacing: -0.1px;
     text-align: left;
     color: #b7c5d3;
-
-    .cursor {
-      height: 28px !important;
-      margin-top:-7px;
+    
+    .scroll-view{
+      height:46px;
+      line-height:46px; 
+    }
+    .cursor, .highlights{
+      height: 30px !important;
+      margin-top:8px;
       margin-left:1px;
     }
   }

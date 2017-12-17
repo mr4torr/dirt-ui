@@ -55,7 +55,6 @@
       .input-checkbox {
         border-radius: 3px;
         background-color: @input-background-color;
-        // box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
         border: 1px solid @input-border-color;
         color: @light-text-color;
 
@@ -65,7 +64,12 @@
 
         &:after,
         &:before {
-          background-color: @light-text-color;
+          background-color: @color-primary;
+        }
+        
+        &:before {
+          left: 5.3px;
+          top: 11.5px;
         }
       }
 
@@ -191,8 +195,7 @@
       .btn {
         position: absolute;
         bottom: 24px;
-        left: 24px;
-        width: 172px;
+        width: 164px;
         height: 32px;
         border-radius: 3px;
         background-color: @input-background-color;
