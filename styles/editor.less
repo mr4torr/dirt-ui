@@ -9,7 +9,7 @@ atom-text-editor[mini] {
   color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
-  height:32px;
+  height:34px;
   font-family: @font-family;
   border: 1px solid transparent;
   max-height:none !important;
@@ -22,6 +22,15 @@ atom-text-editor[mini] {
     border: 1px solid @color-primary;
   }
   .selection .region {
-    background-color: @background-color-selected;
+    background-color: lighten(@background-color-selected, 6%);
+  }
+  .scroll-view{
+    height: 34px;
+    .cursors .cursor{
+      margin-top: 5px;
+    }
+    .lines{
+      line-height: 34px;
+    }
   }
 }

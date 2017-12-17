@@ -19,7 +19,8 @@
 @text-color-selected:  #b7c5d3;
 
 @color:       #282C35;
-@color-secundary: #2E3440;
+@color-secundary: lighten(@color, 3%);
+// @color-secundary: #2E3440;
 
 // @color:       #273137;
 // @color-secundary: lighten(@color, 5%);
@@ -27,15 +28,16 @@
 @background-color-highlight: lighten(@base-background-color, 1%);
 // @app-background-color:       #181d23;
 @app-background-color:       @color;
-@background-color-selected:  lighten(@app-background-color, 4%);
+@background-color-selected:  lighten(@app-background-color, 3%);
+// @background-color-selected:  red;
 
 // Base colors
 @base-background-color: @app-background-color;
-@base-border-color:     #2D3440;
+@base-border-color:     @background-color-selected;
 
 // Component colors
 @pane-item-background-color: @app-background-color;
-@pane-item-border-color:     #282C35;
+@pane-item-border-color:     @base-border-color;
 
 @input-background-color: @color-secundary;
 @input-border-color:     lighten(@input-background-color, 10%);
@@ -110,9 +112,17 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-
 @tab-height: 37px;
 
 // Misc
-// @component-border-radius: 0px;
-// @font-family: '-apple-system', 'SFProText', 'BlinkMacSystemFont', 'Droid Sans Mono','Segoe UI', 'Roboto Mono','Lucida Grande', Ubuntu, Cantarell, sans-serif;
+@component-border-radius: 0px;
+@font-family: '-apple-system', 'SFProText', 'BlinkMacSystemFont', 'Droid Sans Mono','Segoe UI', 'Roboto Mono','Lucida Grande', Ubuntu, Cantarell, sans-serif;
+
+
+@git-text: @text-color;
+@git-bg-hover: #2C313B;
+@git-bg-selected: #2F333E;
+@git-status-added: #86F5B6;
+@git-status-modified: #EBBF83;
+
+
