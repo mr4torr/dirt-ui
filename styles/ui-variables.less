@@ -10,15 +10,22 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+@color: #282C35;
+// @color: #21252C;
+// @color: #181A1F;
+
+// @text-color:           #90A4AE;
+// @text-color-subtle:    #41505e;
+// @text-color-highlight: #b7c5d3;
+// @text-color-selected:  #b7c5d3;
 
 // Text Colors
-@light-text-color:     #cbd1e1;
-@text-color:           #90A4AE;
-@text-color-subtle:    #41505e;
-@text-color-highlight: #b7c5d3;
-@text-color-selected:  #b7c5d3;
+@text-color:           lighten(@color, 40%);
+@light-text-color:     lighten(@text-color, 30%);
+@text-color-subtle:    @text-color;
+@text-color-highlight: @light-text-color;
+@text-color-selected:  @text-color-highlight;
 
-@color: #282C35;
 @cyan: #89DDF3;
 @blue: #78D4F4;
 @purple: #BA9FF8;
@@ -47,7 +54,7 @@
 @background-color-highlight: lighten(@base-background-color, 1%);
 // @app-background-color:       #181d23;
 @app-background-color:       @color;
-@background-color-selected:  lighten(@app-background-color, 3%);
+@background-color-selected:  lighten(@color, 3%);
 // @background-color-selected:  red;
 
 // Base colors
@@ -59,7 +66,8 @@
 @pane-item-border-color:     @base-border-color;
 
 @input-background-color: @color-secundary;
-@input-border-color:     lighten(@input-background-color, 10%);
+// @input-border-color:     @base-border-color;
+@input-border-color:     lighten(@input-background-color, 4%);
 
 @tool-panel-background-color: @color-secundary;
 @tool-panel-border-color: lighten(@tool-panel-background-color, 3%);
@@ -74,10 +82,10 @@
 @overlay-background-color: lighten(@base-background-color, 5%);
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          #333F4A;
-@button-background-color-hover:    #3f515f;
+@button-background-color:          #2E3440;
+@button-background-color-hover:    lighten(@button-background-color, 5%);
 @button-background-color-selected: darken(#3f515f, 4%);
-@button-border-color:              #1E2329;
+@button-border-color:              lighten(@button-background-color, 3%);
 
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-background-color;

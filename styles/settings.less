@@ -12,13 +12,18 @@
       background-color: @input-background-color !important;
       border: 1px solid @input-border-color;
       font-family: @font-family, monospace;
+      &.is-focused{
+        border-color: @color-primary;
+      }
     }
   }
 
   .section.packages {
     .btn-group {
       .btn {
-        border:1px solid #161b21;
+          background-color: @tool-panel-background-color;
+          border: 1px solid @tool-panel-border-color;
+        // border:1px solid #161b21;
         &.selected {
           border:none !important;
           background-color:#b4c5d4;
@@ -198,8 +203,10 @@
         width: 164px;
         height: 32px;
         border-radius: 3px;
-        background-color: @input-background-color;
-        border: 1px solid @input-border-color;
+        background-color: @tool-panel-background-color;
+        border: 1px solid @tool-panel-border-color;
+      // background-color: @input-background-color;
+      //   border: 1px solid @input-border-color;
         font-size: 13px;
         font-weight: 500;
         letter-spacing: -0.5px;
@@ -301,16 +308,17 @@
   }
 
   .package-card {
-    background-color: darken(@app-background-color, 2%);
-    border:none;
+    background-color: rgba(0,0,0,0.05);
+    border:1px solid rgba(0,0,0,0.1);
     margin-bottom: 12px;
     padding: 16px 20px 16px 16px !important;
+    border-radius: 3px;
 
     &.disabled{
-      background-color: darken(@app-background-color, 2%);
+      background-color: rgba(0,0,0,0.05);
     }
     &:hover{
-      background-color: darken(@app-background-color, 4%);
+      background-color: rgba(0,0,0,0.1) !important;
     }
 
     &:nth-child(1) {
@@ -392,20 +400,23 @@
               display: none;
             }
             border-radius: 3px;
-            margin:0 4px;
-            box-shadow: 0 0.5px 3px 0 rgba(19, 25, 32, 0.1);
-            border: 1px solid #232931;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: -0.5px;
-            text-align: center;
-            transition: 200ms ease;
-            color: #b7c5d3;
-            background-color: #333f4a;
+            // margin:0 4px;
+            // box-shadow: 0 0.5px 3px 0 rgba(19, 25, 32, 0.1);
+            // border: 1px solid #232931;
+            // background-color: @tool-panel-background-color;
+            // border: 1px solid @tool-panel-border-color;
+              
+            // font-size: 12px;
+            // font-weight: 500;
+            // letter-spacing: -0.5px;
+            // text-align: center;
+            // transition: 200ms ease;
+            // color: #b7c5d3;
+            // background-color: #333f4a;
 
             &:hover {
-              background-color: #3f505f;
-              color: #ecf2f8;
+              // background-color: #3f505f;
+              // color: #ecf2f8;
             }
           }
         }
@@ -435,9 +446,11 @@
           width: 40px;
           height: 32px;
           border-radius: 3px;
-          background-color: #333f4a;
-          box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
-          border: 1px solid #161b21;
+          background-color: @tool-panel-background-color;
+          border: 1px solid @tool-panel-border-color;
+          // background-color: #333f4a;
+          // box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
+          // border: 1px solid #161b21;
           margin-left: 8px;
           padding: 0;
           background-repeat: no-repeat;
